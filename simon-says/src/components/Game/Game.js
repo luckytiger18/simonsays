@@ -1,17 +1,33 @@
 import React from 'react';
 import { Row, Col, Button } from "react-bootstrap";
-import Help from './Help'
-
-
+import Help from './Help';
+import CountDownTimer from './CountDownTimer';
 
 class Game extends React.Component {
+  // this is initalized the state of the app always 
     state = {
-        displayHelp: false
+        displayHelp: false,
+        gameStart: false,
+        countDownNumber: 3,
     }
+    // How to Play button: line 16  will be the opposite of what displayHelp is on line 9
     toggleHelp = () => {
         this.setState({
             displayHelp: !this.state.displayHelp
         })
+    }
+    // Start Button: line 22 will be the opposite of what gameStart is on line 10
+    startGame = () => {
+      if (this.state.gameStart === false) {
+        this.setState({
+          gameStart: true
+        })
+        return
+      }
+      this.setState({
+        // gameStart: !this.state.gameStart
+        countDownNumber: this.state.countDownNumber -1 
+      })
     }
   render() {
     return (
@@ -37,7 +53,10 @@ class Game extends React.Component {
             <div className="quarterBottomRightCircle"></div>
           </Col>
           <div>
-            <Button id="startGame">Start Game</Button>
+          <Button onClick={this.startGame} id="startButton">Start Game</Button> 
+          {console.log(this.state.gameStart)}
+          {this.state.gameStart === true ? <CountDownTimer number = {this.state.countDownNumber}/> : null}
+           
           </div>
         </Row>
       </div>
