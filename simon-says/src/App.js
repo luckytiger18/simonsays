@@ -1,17 +1,13 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+import Game from "./components/Game/Game"
+
+const App = () => {
   return (
-    <div className="welcomeTo">Welcome to Simon Says Game
-       <Button>How to Play</Button>
-       <Button>Start Game</Button>
-       </div>
-
- 
-  );
+    < Game />
+  )
 }
 
 export default App;

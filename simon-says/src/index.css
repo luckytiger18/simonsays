@@ -2,3 +2,56 @@
   font-size: 64px;
   text-align: center;
 }
+
+.quarterTopLeftCircle {
+  background-color: red;
+  height: 200px;
+  width: 250px;
+  border-radius: 100% 0 0 0;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.quarterBottomLeftCircle {
+  background-color:yellow;
+  height: 200px;
+  width: 250px;
+  border-radius: 0 0 0 100%;
+  margin-top: 10px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.quarterTopRightCircle {
+  background-color: blue;
+  height: 200px;
+  width: 250px;
+  border-radius: 0 100% 0 0;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.quarterBottomRightCircle {
+  background-color:green;
+  height: 200px;
+  width: 250px;
+  border-radius: 0 0 100% 0;
+  margin-top: 10px;
+  box-shadow: 0 0 0 300px rgba(red, .75);
+  opacity: 0.6;
+  transition: 0.3s;
+  ;
+}
+.quarterBottomRightCircle:hover, .quarterTopRightCircle:hover, .quarterBottomLeftCircle:hover, .quarterTopLeftCircle:hover {
+  opacity: 1;
+}
+
+p {
+  font-size: 20px;
+}
+
+#objectiveBox {
+  background-color: grey;
+  border-radius: 10px;
+}
+
