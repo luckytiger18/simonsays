@@ -1,7 +1,6 @@
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import Help from "./Help";
-import Simon from "./Simon";
 import GamePiece from "./GamePiece";
 
 class Game extends React.Component {
